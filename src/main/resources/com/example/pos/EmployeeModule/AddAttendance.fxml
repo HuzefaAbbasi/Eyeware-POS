@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="280.0" maxWidth="480.0" minHeight="280.0" minWidth="480.0" prefHeight="280.0" prefWidth="480.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.EmployeeModule.AddAttendanceController">
+   <children>
+      <Pane prefHeight="65.0" prefWidth="480.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Attendance.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="80.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD ATTENDANCE" wrappingWidth="221.089599609375">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="70.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attendance">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <ComboBox fx:id="type" layoutX="175.0" layoutY="80.0" prefHeight="32.0" prefWidth="230.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow height="1.0" radius="0.0" width="1.0">
+               <color>
+                  <Color opacity="0.8999999761581421" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="option-box" />
+         </styleClass>
+      </ComboBox>
+      <Text layoutX="70.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <DatePicker fx:id="attendanceDate" editable="false" layoutX="175.0" layoutY="130.0" prefHeight="32.0" prefWidth="230.0" promptText="Select Date" />
+      <Text layoutX="70.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <Spinner fx:id="hourSpinner" layoutX="175.0" layoutY="180.0" prefHeight="32.0" prefWidth="110.0" />
+      <Spinner fx:id="minuteSpinner" layoutX="295.0" layoutY="180.0" prefHeight="32.0" prefWidth="110.0" />
+      <Line endX="480.0" layoutY="230.0" opacity="0.6" />
+      <Button alignment="CENTER" layoutX="195.0" layoutY="240.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="25.0" prefWidth="100.0" stylesheets="@../Stylesheets/buttonStyle.css" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Tick.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" layoutX="305.0" layoutY="240.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF1717;" stylesheets="@../Stylesheets/backButton.css" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+
+   </children>
+</AnchorPane>

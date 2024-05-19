@@ -1,0 +1,87 @@
+.bg-rad-8 {
+    -fx-background-radius: 8px;
+
+}
+
+.table-view {
+    -fx-font-family: Verdana;
+    -fx-font-size: 14 px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #6156e8;
+    -fx-font-size: 16px;
+    -fx-font-family: Verdana;
+}
+.table-view .column-header .label {
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell{
+    -fx-alignment: center;
+}
+
+.table-view .table-row-cell:hover .table-cell {
+    -fx-background-color: #6156e8;
+    -fx-text-fill: white;
+    -fx-cursor: hand;
+}
+
+.bg-white {
+    -fx-background-color: white;
+}
+
+.side-bar-menu {
+    -fx-background-color: #6156e8;
+}
+
+.btm-border {
+    -fx-border-radius: 0 12 12 0;
+    -fx-background-radius: 0 0 12 12;
+}
+
+.border-field {
+    -fx-border-color: grey;
+    -fx-border-width: 0 0 1 0;
+}
+
+.date-picker .text-field {
+    -fx-font-family: Verdana;
+    -fx-font-size: 16px;
+    -fx-border-color:  #CFCBCB;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.date-picker .arrow-button {
+    -fx-background-image: url('../Images/DatepickerIcon.png');
+    -fx-background-size: 18px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: center;
+    -fx-padding: 5 15;
+}
+
+.combo-box .list-cell {
+    -fx-font-family: Verdana;
+    -fx-font-size: 16px;
+}
+
+.combo-box{
+    -fx-border-color:  #CFCBCB;
+    -fx-border-radius: 3;
+    -fx-background-radius: 3;
+}
+
+.custom-text-field {
+    -fx-text-fill: #6156e8;
+}
+
+.spinner{
+    -fx-font-family: Verdana;
+    -fx-font-size: 14px;
+}
+
+.spinner:focused{
+    -fx-font-family: Verdana;
+    -fx-font-size: 18px;
+}

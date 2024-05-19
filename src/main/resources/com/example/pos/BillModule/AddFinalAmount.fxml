@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="190.0" prefWidth="450.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.BillModule.AddFinalAmountController">
+   <children>
+      <Pane prefHeight="65.0" prefWidth="450.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Create.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="80.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ADD FINAL AMOUNT" wrappingWidth="251.48968505859375">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="70.0" layoutY="105.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Final Amount">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="finalAmountField" editable="false" layoutX="190.0" layoutY="85.0" prefWidth="230.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Line endX="450.0" layoutY="137.0" opacity="0.6" />
+      <Button alignment="CENTER" layoutX="205.0" layoutY="150.0" mnemonicParsing="false" onAction="#onAddClicked" prefHeight="25.0" prefWidth="100.0" stylesheets="@../Stylesheets/buttonStyle.css" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Tick.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" layoutX="315.0" layoutY="150.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF1717;" stylesheets="@../Stylesheets/backButton.css" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

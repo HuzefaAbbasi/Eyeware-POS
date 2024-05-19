@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="794.0" maxWidth="1534.0" minHeight="794.0" minWidth="1534.0" prefHeight="794.0" prefWidth="1534.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.BillModule.CustomerBillController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="1534.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="130.0" layoutX="55.0" layoutY="2.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+               <effect>
+                  <DropShadow height="30.0" radius="14.5" width="30.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="20.0" text="FALCON EYEWEAR" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow height="30.0" radius="14.5" width="30.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.699999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <Label layoutX="20.0" layoutY="105.0" text="Invoice Number">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="invoiceNoField" layoutX="230.0" layoutY="95.0" onAction="#onInvoiceKeyDown" prefHeight="35.0" prefWidth="350.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="20.0" layoutY="160.0" text="Phone Number">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerPhoneField" layoutX="230.0" layoutY="150.0" onAction="#onCustomerPhKeyDown" prefHeight="35.0" prefWidth="350.0" promptText="Customer Phone Number">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="20.0" layoutY="215.0" text="Customer ">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="customerStatusLabel" layoutX="440.0" layoutY="193.0" text="Already Customer " textFill="#4fb96d">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="customerNamesComboBox" layoutX="230.0" layoutY="210.0" onAction="#customerDropDownAction" prefHeight="35.0" prefWidth="350.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <InnerShadow height="1.0" radius="0.0" width="1.0">
+               <color>
+                  <Color opacity="0.8999999761581421" />
+               </color>
+            </InnerShadow>
+         </effect>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="option-box" />
+         </styleClass>
+      </ComboBox>
+      <Label layoutX="20.0" layoutY="270.0" text="Customer Name">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="customerNameField" layoutX="230.0" layoutY="265.0" onAction="#onCustomerNameKeyDown" prefHeight="35.0" prefWidth="350.0" promptText="Customer Name">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="20.0" layoutY="325.0" text="Customer Address">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="customerAddress" layoutX="230.0" layoutY="320.0" prefHeight="60.0" prefWidth="350.0" promptText="Customer Address" wrapText="true">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextArea>
+      <Label layoutX="655.0" layoutY="105.0" text="Bill Date">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="billDate" editable="false" layoutX="845.0" layoutY="95.0" prefHeight="35.0" prefWidth="350.0" promptText="Select Date" />
+      <Label layoutX="655.0" layoutY="160.0" text="Delivery Date">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="deliveryDate" editable="false" layoutX="845.0" layoutY="150.0" prefHeight="35.0" prefWidth="350.0" promptText="Select Date" />
+      <GridPane layoutX="655.0" layoutY="230.0" prefHeight="150.0" prefWidth="470.0" style="-fx-border-color: #6156e8; -fx-border-radius: 7;" styleClass="bg-white">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Rx" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label contentDisplay="CENTER" layoutX="188.0" layoutY="17.0" text="SPH" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label text="CYL" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label contentDisplay="CENTER" text="AXIS" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="11.0" layoutY="17.0" text="ADD" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <Label layoutX="118.0" layoutY="17.0" text="Right" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="sphRight1" alignment="CENTER" maxWidth="80.0" minWidth="80.0" onAction="#onRSph1" prefWidth="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cylRight1" alignment="CENTER" layoutX="70.0" layoutY="44.0" maxWidth="80.0" minWidth="80.0" onAction="#onRCyl1" prefWidth="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="axisRight1" alignment="CENTER" layoutX="129.0" layoutY="44.0" maxWidth="80.0" minWidth="80.0" onAction="#onRAxis1" prefWidth="80.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="addRight1" alignment="CENTER" layoutX="155.0" layoutY="44.0" maxWidth="80.0" minWidth="80.0" onAction="#onRAdd1" prefWidth="80.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <Label layoutX="118.0" layoutY="17.0" text="Left" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="sphLeft1" alignment="CENTER" layoutX="96.0" layoutY="66.0" maxWidth="80.0" minWidth="80.0" onAction="#onLSph1" prefWidth="80.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="cylLeft1" alignment="CENTER" layoutX="96.0" layoutY="112.0" maxWidth="80.0" minWidth="80.0" onAction="#onLCyl1" prefWidth="80.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="axisLeft1" alignment="CENTER" layoutX="169.0" layoutY="112.0" maxWidth="80.0" minWidth="80.0" onAction="#onLAxis1" prefWidth="80.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="addLeft1" alignment="CENTER" layoutX="244.0" layoutY="112.0" maxWidth="80.0" minWidth="80.0" onAction="#onLAdd1" prefWidth="80.0" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </TextField>
+         </children>
+         <effect>
+            <DropShadow height="30.0" radius="15.75" width="35.0">
+               <color>
+                  <Color opacity="0.10000000149011612" />
+               </color>
+            </DropShadow>
+         </effect>
+      </GridPane>
+      <GridPane layoutX="1140.0" layoutY="230.0" prefHeight="150.0" prefWidth="140.0" style="-fx-border-color: #6156e8; -fx-border-radius: 7;" styleClass="bg-white">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="66.93332519531249" minHeight="30.0" prefHeight="46.599981689453124" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="102.73336791992186" minHeight="10.0" prefHeight="72.20001831054688" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="I.P.D" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="20.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="ipd1" onKeyPressed="#onIpd1" prefHeight="70.0" prefWidth="130.0" styleClass="btm-border" wrapText="true" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </TextArea>
+         </children>
+         <effect>
+            <DropShadow height="30.0" radius="15.75" width="35.0">
+               <color>
+                  <Color opacity="0.10000000149011612" />
+               </color>
+            </DropShadow>
+         </effect>
+      </GridPane>
+      <TextField fx:id="productCodeField" layoutX="20.0" layoutY="390.0" onAction="#productCodeKeyDown" prefHeight="40.0" prefWidth="180.0" promptText="Enter Product Code">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="productNameField" editable="false" layoutX="210.0" layoutY="390.0" prefHeight="40.0" prefWidth="310.0" promptText="Product Name">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="quantityField" editable="false" layoutX="530.0" layoutY="390.0" onAction="#onQuantityKeyDown" prefHeight="40.0" prefWidth="90.0" promptText="Quantity">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="priceField" editable="false" layoutX="635.0" layoutY="390.0" onAction="#onPriceKeyDown" prefHeight="40.0" prefWidth="130.0" promptText="Enter Price">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="discountPercentageField" editable="false" layoutX="775.0" layoutY="390.0" onAction="#onDiscountPercentageField" prefHeight="40.0" prefWidth="110.0" promptText="Discount %">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="discountField" editable="false" layoutX="895.0" layoutY="390.0" onAction="#onDiscountField" prefHeight="40.0" prefWidth="100.0" promptText="Discount">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField editable="false" layoutX="1005.0" layoutY="390.0" prefHeight="40.0" prefWidth="305.0" promptText="Total">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TableView fx:id="table" layoutX="20.0" layoutY="440.0" prefHeight="345.0" prefWidth="1300.0">
+         <columns>
+            <TableColumn fx:id="pCode" editable="false" maxWidth="190.0" minWidth="190.0" prefWidth="190.0" resizable="false" sortable="false" text="Product Code" />
+            <TableColumn fx:id="pName" editable="false" maxWidth="320.0" minWidth="320.0" prefWidth="320.0" resizable="false" sortable="false" text="Product Name" />
+            <TableColumn fx:id="pQuantity" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="Quantity" />
+            <TableColumn fx:id="pPrice" editable="false" maxWidth="140.0" minWidth="140.0" prefWidth="140.0" resizable="false" sortable="false" text="Price" />
+            <TableColumn fx:id="discountPercentageTVColumn" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" sortable="false" text="Discount %" />
+            <TableColumn fx:id="discountTVColumn" editable="false" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="false" sortable="false" text="Discount" />
+            <TableColumn fx:id="pTotal" editable="false" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" sortable="false" text="Total" />
+            <TableColumn fx:id="editButtonTVColumn" editable="false" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" resizable="false" sortable="false" text="Edit" />
+            <TableColumn fx:id="removeButtonTVColumn" editable="false" maxWidth="95.0" minWidth="95.0" prefWidth="95.0" resizable="false" sortable="false" text="Remove" />
+         </columns>
+         <effect>
+            <DropShadow height="32.5" offsetY="3.0" radius="16.375" width="35.0">
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <AnchorPane layoutX="1334.0" layoutY="80.0" maxHeight="794.0" maxWidth="200.0" minHeight="713.0" minWidth="200.0" prefHeight="714.0" prefWidth="200.0" style="-fx-border-color: #6156e8; -fx-border-width: 0 0 0 1;" styleClass="bg-white" stylesheets="@../Stylesheets/buttonStyle.css">
+         <children>
+            <Label layoutX="10.0" layoutY="15.0" opacity="0.7" text="TOTAL">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalBillField" editable="false" layoutX="10.0" layoutY="40.0" prefHeight="40.0" prefWidth="180.0" promptText="Total Bill">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="10.0" layoutY="95.0" opacity="0.7" text="ADVANCE">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="advanceAmountField" editable="false" layoutX="10.0" layoutY="120.0" onAction="#onAdvanceKeyDown" prefHeight="40.0" prefWidth="180.0" promptText="Advance Amount">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="10.0" layoutY="175.0" opacity="0.7" text="BALANCE">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="balanceAmountField" editable="false" layoutX="10.0" layoutY="200.0" prefHeight="40.0" prefWidth="180.0" promptText="Remaining Amount">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <TextArea fx:id="billNote" layoutX="10.0" layoutY="280.0" prefHeight="140.0" prefWidth="180.0" promptText="Enter bill note" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="10.0" layoutY="605.0" mnemonicParsing="false" onAction="#onSaveClicked" prefHeight="40.0" prefWidth="180.0" text="SAVE BILL" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Tick.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="660.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="40.0" prefWidth="180.0" text="CANCEL BILL" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="550.0" mnemonicParsing="false" onAction="#onOBProductClicked" prefHeight="40.0" prefWidth="180.0" text="OB Product" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Create.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="10.75" width="45.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="794.0" maxWidth="1534.0" minHeight="794.0" minWidth="1534.0" prefHeight="794.0" prefWidth="1534.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.VendorModule.VendorBillController">
+   <children>
+      <AnchorPane prefHeight="80.0" prefWidth="1534.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="75.0" fitWidth="130.0" layoutX="55.0" layoutY="2.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Logo.png" />
+               </image>
+               <effect>
+                  <DropShadow height="30.0" radius="14.5" width="30.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ImageView>
+            <Label layoutX="145.0" layoutY="20.0" text="FALCON EYEWEAR" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="36.0" />
+               </font>
+               <effect>
+                  <DropShadow height="30.0" radius="14.5" width="30.0">
+                     <color>
+                        <Color opacity="0.5" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.699999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <Label layoutX="40.0" layoutY="100.0" text="VENDOR BILL">
+         <font>
+            <Font name="Verdana Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="170.0" text="Invoice Number">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="invoiceNoField" editable="false" layoutX="220.0" layoutY="160.0" prefHeight="35.0" prefWidth="100.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <Label layoutX="380.0" layoutY="170.0" text="Bill Date">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="billDate" editable="false" layoutX="480.0" layoutY="165.0" prefHeight="35.0" prefWidth="250.0" promptText="Select Bill Date" />
+      <Label layoutX="770.0" layoutY="170.0" text="Vendor Name">
+         <font>
+            <Font name="Verdana" size="20.0" />
+         </font>
+      </Label>
+      <TextField editable="false" layoutX="930.0" layoutY="160.0" prefHeight="35.0" prefWidth="320.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="border-field" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="productcode" layoutX="40.0" layoutY="220.0" onKeyPressed="#productCodeKeyDown" prefHeight="40.0" prefWidth="230.0" promptText="Enter Product Code">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="productName" editable="false" layoutX="290.0" layoutY="220.0" prefHeight="40.0" prefWidth="430.0" promptText="Product Name">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="quantity" editable="false" layoutX="740.0" layoutY="220.0" onKeyPressed="#onQuantityKeyDown" prefHeight="40.0" prefWidth="130.0" promptText="Quantity">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <TextField fx:id="price" editable="false" layoutX="895.0" layoutY="220.0" prefHeight="40.0" prefWidth="160.0" promptText="Price">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <TextField editable="false" layoutX="1075.0" layoutY="220.0" prefHeight="40.0" prefWidth="180.0" promptText="Total">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+         <styleClass>
+            <String fx:value="border-field" />
+            <String fx:value="bg-white" />
+         </styleClass>
+      </TextField>
+      <TableView fx:id="table" layoutX="40.0" layoutY="275.0" prefHeight="500.0" prefWidth="1215.0">
+         <columns>
+            <TableColumn fx:id="pCode" editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" sortable="false" text="Product Code" />
+            <TableColumn fx:id="pName" editable="false" maxWidth="450.0" minWidth="450.0" prefWidth="450.0" resizable="false" sortable="false" text="Product Name" />
+            <TableColumn fx:id="pQuantity" editable="false" maxWidth="155.0" minWidth="155.0" prefWidth="155.0" resizable="false" sortable="false" text="Quantity" />
+            <TableColumn fx:id="pPrice" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Price" />
+            <TableColumn fx:id="pTotal" editable="false" maxWidth="180.0" minWidth="180.0" prefWidth="180.0" resizable="false" sortable="false" text="Total" />
+         </columns>
+         <effect>
+            <DropShadow height="32.5" offsetY="3.0" radius="16.375" width="35.0">
+               <color>
+                  <Color opacity="0.20000000298023224" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <AnchorPane layoutX="1284.0" layoutY="80.0" prefHeight="714.0" prefWidth="250.0" style="-fx-border-color: #6156e8; -fx-border-width: 0 0 0 1;" styleClass="bg-white" stylesheets="@../Stylesheets/buttonStyle.css">
+         <children>
+            <Label layoutX="10.0" layoutY="15.0" opacity="0.7" text="TOTAL">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="totalBillField" editable="false" layoutX="10.0" layoutY="40.0" prefHeight="40.0" prefWidth="230.0" promptText="Total Bill">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="10.0" layoutY="95.0" opacity="0.7" text="ADVANCE">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="advanceAmountField" editable="false" layoutX="10.0" layoutY="120.0" onAction="#onAdvanceKeyDown" prefHeight="40.0" prefWidth="230.0" promptText="Advance Amount">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <Label layoutX="10.0" layoutY="175.0" opacity="0.7" text="BALANCE">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="balanceAmountField" editable="false" layoutX="10.0" layoutY="200.0" prefHeight="40.0" prefWidth="230.0" promptText="Remaining Amount">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="border-field" />
+               </styleClass>
+            </TextField>
+            <TextArea fx:id="billNote" layoutX="10.0" layoutY="260.0" prefHeight="120.0" prefWidth="230.0" promptText="Enter bill note" wrapText="true">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </TextArea>
+            <Button layoutX="10.0" layoutY="550.0" mnemonicParsing="false" onAction="#onRemoveClicked" prefHeight="40.0" prefWidth="230.0" text="REMOVE FROM BILL" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Trash.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="605.0" mnemonicParsing="false" onAction="#onSaveClicked" prefHeight="40.0" prefWidth="230.0" text="SAVE BILL" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Tick.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="10.0" layoutY="660.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="40.0" prefWidth="230.0" text="CANCEL BILL" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Cancel.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="0.0" radius="10.75" width="45.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

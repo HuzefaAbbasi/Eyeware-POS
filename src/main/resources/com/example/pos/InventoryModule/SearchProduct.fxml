@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.InventoryModule.SearchProductController">
+    <children>
+      <Pane prefHeight="75.0" prefWidth="1000.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="65.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Inventory.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="120.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Product" wrappingWidth="237.6229248046875">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Text>
+            <ComboBox fx:id="categoryComboBox" layoutX="415.0" layoutY="23.0" onAction="#categoryComboBoxAction" prefHeight="35.0" prefWidth="200.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="1.0" radius="0.0" width="1.0">
+                     <color>
+                        <Color opacity="0.8999999761581421" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="option-box" />
+               </styleClass>
+            </ComboBox>
+            <TextField fx:id="searchField" layoutX="635.0" layoutY="20.0" maxHeight="40.0" maxWidth="300.0" minHeight="40.0" minWidth="300.0" onKeyTyped="#keyDown" prefHeight="40.0" prefWidth="300.0" promptText="Enter Product Name">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="bg-rad-8" />
+               </styleClass>
+            </TextField>
+         </children>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.699999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <TableView fx:id="table" layoutX="40.0" layoutY="110.0" prefHeight="415.0" prefWidth="920.0">
+         <columns>
+            <TableColumn fx:id="productCodeTVColumn" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Product Code" />
+            <TableColumn fx:id="nameTVColumn" editable="false" maxWidth="290.0" minWidth="290.0" prefWidth="290.0" resizable="false" text="Product Name" />
+            <TableColumn fx:id="categoryTVColumn" editable="false" maxWidth="110.0" minWidth="110.0" prefWidth="110.0" resizable="false" text="Category" />
+            <TableColumn fx:id="stockTVColumn" editable="false" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" resizable="false" text="Product Stock" />
+            <TableColumn fx:id="minimumRetailPriceTVColumn" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Retail Price" />
+            <TableColumn fx:id="discountTVColumn" editable="false" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" resizable="false" text="Discount %" />
+         </columns>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+      <Button fx:id="selectButton" layoutX="690.0" layoutY="545.0" mnemonicParsing="false" onAction="#onSelectClicked" prefHeight="25.0" prefWidth="125.0" stylesheets="@../Stylesheets/buttonStyle.css" text="Select" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Tick.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.4000000059604645" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+      <Button alignment="CENTER" layoutX="830.0" layoutY="545.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="25.0" prefWidth="125.0" style="-fx-background-color: #FF1717;" stylesheets="@../Stylesheets/backButton.css" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+    </children>
+</AnchorPane>

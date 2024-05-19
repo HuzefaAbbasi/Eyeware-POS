@@ -1,0 +1,16 @@
+.button {
+    -fx-background-radius: 7;
+    -fx-text-fill: #FFFFFFD5;
+}
+
+.button:hover {
+    -fx-text-fill: #fff;
+}
+
+.image-view {
+    -fx-opacity: 0.8;
+}
+
+.button:hover .image-view {
+    -fx-opacity: 1;
+}

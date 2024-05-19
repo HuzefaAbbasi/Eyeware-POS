@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="794.0" maxWidth="1534.0" minHeight="794.0" minWidth="1534.0" prefHeight="794.0" prefWidth="1534.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.CustomerModule.CustomerController">
+   <children>
+      <Pane prefHeight="794.0" prefWidth="310.0" styleClass="side-bar-menu" stylesheets="@../Stylesheets/buttonStyle.css">
+         <children>
+            <Pane layoutY="-10.0" prefHeight="185.0" prefWidth="310.0" styleClass="side-bar-menu">
+               <children>
+                  <ImageView fitHeight="90.0" fitWidth="90.0" layoutX="110.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Logo.png" />
+                     </image>
+                     <effect>
+                        <DropShadow height="45.0" radius="22.0" width="45.0">
+                           <color>
+                              <Color opacity="0.699999988079071" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutY="125.0" prefHeight="60.0" prefWidth="310.0" text="FALCON EYEWEAR" textFill="WHITE">
+                     <font>
+                        <Font name="Verdana Bold" size="26.0" />
+                     </font>
+                     <effect>
+                        <DropShadow height="30.0" radius="14.5" width="30.0" />
+                     </effect>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow height="45.0" radius="10.75" width="0.0">
+                     <color>
+                        <Color opacity="0.699999988079071" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Pane>
+            <Button fx:id="billButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="190.0" mnemonicParsing="false" onAction="#onBillsClicked" prefHeight="50.0" prefWidth="305.0" text="BILLS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Bills.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="customerButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="240.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="305.0" text="CUSTOMERS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Customer.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="inventoryButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="290.0" mnemonicParsing="false" onAction="#onInventoryClicked" prefHeight="50.0" prefWidth="305.0" text="INVENTORY">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Inventory.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="vendorButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="340.0" mnemonicParsing="false" onAction="#onVendorsClicked" prefHeight="50.0" prefWidth="305.0" text="VENDORS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Vendor.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="employeeButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="390.0" mnemonicParsing="false" onAction="#onEmployeesClicked" prefHeight="50.0" prefWidth="305.0" text="EMPLOYEES">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Employee.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reportButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="440.0" mnemonicParsing="false" onAction="#onReportsClicked" prefHeight="50.0" prefWidth="305.0" text="REPORTS">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Reports.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="profileButton" alignment="BOTTOM_LEFT" graphicTextGap="8.0" layoutX="2.0" layoutY="730.0" mnemonicParsing="false" onAction="#onProfileClicked" prefHeight="50.0" prefWidth="305.0" text="PROFILE" visible="false">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" opacity="0.8" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/ProfileWhite.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets bottom="7.0" left="30.0" />
+               </padding>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.699999988079071" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
+      <Pane layoutX="340.0" layoutY="-10.0" prefHeight="95.0" prefWidth="1170.0">
+         <styleClass>
+            <String fx:value="bg-white" />
+            <String fx:value="bg-rad-8" />
+         </styleClass>
+         <effect>
+            <DropShadow height="45.0" offsetX="3.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+         <children>
+            <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="35.0" layoutY="39.0" opacity="0.6" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/ProductList.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="70.0" layoutY="25.0" opacity="0.7" prefHeight="60.0" prefWidth="200.0" text="Customers">
+               <font>
+                  <Font name="Verdana Bold" size="32.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="searchOptionComboBox" layoutX="490.0" layoutY="35.0" prefHeight="35.0" prefWidth="200.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <InnerShadow height="1.0" radius="0.0" width="1.0">
+                     <color>
+                        <Color opacity="0.8999999761581421" />
+                     </color>
+                  </InnerShadow>
+               </effect>
+               <styleClass>
+                  <String fx:value="bg-white" />
+                  <String fx:value="option-box" />
+               </styleClass>
+            </ComboBox>
+            <TextField fx:id="searchField" layoutX="740.0" layoutY="30.0" maxHeight="45.0" maxWidth="320.0" minHeight="45.0" minWidth="320.0" onKeyTyped="#keyDown" prefHeight="45.0" prefWidth="320.0" styleClass="bg-rad-8">
+               <font>
+                  <Font name="Verdana" size="16.0" />
+               </font>
+            </TextField>
+            <Button fx:id="signOutButton" layoutX="1090.0" layoutY="30.0" mnemonicParsing="false" onAction="#onSignOutClicked" opacity="0.5" prefHeight="35.0" prefWidth="45.0" style="-fx-border-color: red; -fx-border-radius: 15; -fx-border-width: 2px;" styleClass="bg-white" stylesheets="@../Stylesheets/backButton.css" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Images/Logout.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="table" layoutX="350.0" layoutY="125.0" maxHeight="640.0" maxWidth="1150.0" minHeight="640.0" minWidth="1150.0" prefHeight="640.0" prefWidth="1150.0" styleClass="column-header">
+         <columns>
+            <TableColumn fx:id="nameTVColumn" editable="false" maxWidth="250.0" minWidth="250.0" prefWidth="250.0" resizable="false" text="Customer Name" />
+            <TableColumn fx:id="phoneNumberTVColumn" editable="false" maxWidth="230.0" minWidth="230.0" prefWidth="230.0" resizable="false" text="Phone Number" />
+            <TableColumn fx:id="creditTVColumn" editable="false" maxWidth="150.0" minWidth="150.0" prefWidth="150.0" resizable="false" text="Credit Amount" />
+            <TableColumn fx:id="addressTVColumn" editable="false" maxWidth="420.0" minWidth="420.0" prefWidth="420.0" resizable="false" sortable="false" text="Customer Address" />
+            <TableColumn fx:id="viewButtonTVColumn" editable="false" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" resizable="false" sortable="false" text="View" />
+         </columns>
+         <effect>
+            <DropShadow height="45.0" radius="22.0" width="45.0">
+               <color>
+                  <Color opacity="0.30000001192092896" />
+               </color>
+            </DropShadow>
+         </effect>
+      </TableView>
+   </children>
+</AnchorPane>

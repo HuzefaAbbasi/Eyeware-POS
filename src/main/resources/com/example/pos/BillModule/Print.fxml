@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="755.0" prefWidth="520.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.BillModule.PrintController">
+   <children>
+      <Label prefHeight="15.0" prefWidth="100.0" text="Bill No">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" prefHeight="15.0" prefWidth="110.0" text="12345">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" prefHeight="15.0" prefWidth="115.0" text="Order Date &amp; Time">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" prefHeight="15.0" prefWidth="65.0" text="08/31/2023">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" prefHeight="15.0" prefWidth="50.0" text="19:08:40">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="20.0" prefHeight="15.0" prefWidth="80.0" text="Delivery Date">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="20.0" prefHeight="15.0" prefWidth="65.0" text="08/31/2023">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutY="40.0" prefHeight="15.0" prefWidth="100.0" text="Customer Phone">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="40.0" prefHeight="15.0" prefWidth="110.0" text="03004301318">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutY="20.0" prefHeight="15.0" prefWidth="100.0" text="Cashier Name">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="20.0" prefHeight="15.0" prefWidth="110.0" text="Abdul Rehman Butt">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <TableView layoutY="60.0" prefHeight="170.0" prefWidth="470.0">
+        <columns>
+          <TableColumn maxWidth="260.0" minWidth="260.0" prefWidth="260.0" text="Name" />
+            <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="Qty" />
+            <TableColumn maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Price" />
+            <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="DC" />
+            <TableColumn maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Total" />
+        </columns>
+      </TableView>
+      <Label layoutY="235.0" prefHeight="15.0" prefWidth="35.0" text="Total:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="235.0" prefHeight="15.0" prefWidth="55.0" text="12345678">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="100.0" layoutY="235.0" prefHeight="15.0" prefWidth="55.0" text="Advance:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="160.0" layoutY="235.0" prefHeight="15.0" prefWidth="55.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="310.0" layoutY="235.0" prefHeight="15.0" prefWidth="55.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="370.0" layoutY="235.0" prefHeight="15.0" prefWidth="50.0" text="Balance:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="425.0" layoutY="235.0" prefHeight="15.0" prefWidth="55.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="220.0" layoutY="235.0" prefHeight="15.0" prefWidth="85.0" text="Final Amount:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutY="265.0" prefHeight="15.0" prefWidth="100.0" text="Bill No">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="265.0" prefHeight="15.0" prefWidth="110.0" text="12345">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="265.0" prefHeight="15.0" prefWidth="115.0" text="Order Date &amp; Time">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="265.0" prefHeight="15.0" prefWidth="65.0" text="08/31/2023">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="420.0" layoutY="265.0" prefHeight="15.0" prefWidth="50.0" text="19:08:40">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="285.0" prefHeight="15.0" prefWidth="80.0" text="Delivery Date">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="350.0" layoutY="285.0" prefHeight="15.0" prefWidth="65.0" text="08/31/2023">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="230.0" layoutY="305.0" prefHeight="15.0" prefWidth="50.0" text="Name">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="305.0" prefHeight="15.0" prefWidth="110.0" text="0300-4301318">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutY="285.0" prefHeight="15.0" prefWidth="100.0" text="Cashier Name">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="110.0" layoutY="285.0" prefHeight="15.0" prefWidth="110.0" text="Abdul Rehman Butt">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <TableView layoutY="325.0" prefHeight="170.0" prefWidth="470.0">
+         <columns>
+            <TableColumn maxWidth="260.0" minWidth="260.0" prefWidth="260.0" text="Name" />
+            <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="Qty" />
+            <TableColumn maxWidth="60.0" minWidth="60.0" prefWidth="60.0" text="Price" />
+            <TableColumn maxWidth="40.0" minWidth="40.0" prefWidth="40.0" text="DC" />
+            <TableColumn maxWidth="70.0" minWidth="70.0" prefWidth="70.0" text="Total" />
+         </columns>
+      </TableView>
+      <Label layoutY="500.0" prefHeight="15.0" prefWidth="40.0" text="Total:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="50.0" layoutY="500.0" prefHeight="15.0" prefWidth="70.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="130.0" layoutY="500.0" prefHeight="15.0" prefWidth="60.0" text="Advance:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="200.0" layoutY="500.0" prefHeight="15.0" prefWidth="70.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="500.0" prefHeight="15.0" prefWidth="70.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="520.0" prefHeight="15.0" prefWidth="60.0" text="Balance:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="520.0" prefHeight="15.0" prefWidth="70.0" text="1234567">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="280.0" layoutY="500.0" prefHeight="15.0" prefWidth="100.0" text="Final Payment:">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutY="305.0" prefHeight="15.0" prefWidth="100.0" text="Customer Phone">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="305.0" prefHeight="15.0" prefWidth="170.0" text="Abdul Rehman Butt bin Abdul ">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="5.0" layoutY="520.0" prefHeight="60.0" prefWidth="460.0" style="-fx-border-color: black;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="15.0" prefWidth="35.0" text="Right" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="56.0" prefHeight="15.0" prefWidth="35.0" text="Left" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="56.0" prefHeight="15.0" prefWidth="35.0" text="SPH" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="96.0" layoutY="20.0" prefHeight="15.0" prefWidth="35.0" text="CYL" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="182.0" layoutY="20.0" prefHeight="15.0" prefWidth="35.0" text="ADD" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="182.0" layoutY="20.0" prefHeight="15.0" prefWidth="35.0" text="AXIS" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="356.0" layoutY="20.0" prefHeight="15.0" prefWidth="35.0" text="IPD" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="33.0" layoutY="33.0" prefHeight="15.0" prefWidth="45.0" text="+0.245" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="104.0" layoutY="33.0" prefHeight="15.0" prefWidth="45.0" text="-9.999" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="184.0" layoutY="32.0" prefHeight="15.0" prefWidth="70.0" text="-9.9999999" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+               <font>
+                  <Font name="Times New Roman" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <Label layoutX="230.0" layoutY="40.0" prefHeight="15.0" prefWidth="50.0" text="Name">
+         <font>
+            <Font name="Times New Roman Bold" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="300.0" layoutY="40.0" prefHeight="15.0" prefWidth="170.0" text="Abdul Rehman Butt bin Abdul ">
+         <font>
+            <Font name="Times New Roman" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

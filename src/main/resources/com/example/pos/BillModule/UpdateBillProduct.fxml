@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="435.0" prefWidth="580.0" styleClass="bg-white" stylesheets="@../Stylesheets/StyleSheet.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.pos.BillModule.UpdateBillProductController">
+   <children>
+      <Pane prefHeight="65.0" prefWidth="580.0" styleClass="side-bar-menu">
+         <children>
+            <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="30.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Edit.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="80.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EDIT BILL PRODUCT" wrappingWidth="280.0">
+               <font>
+                  <Font name="Verdana Bold" size="20.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <Text layoutX="70.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Code">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="productCodeField" editable="false" layoutX="235.0" layoutY="80.0" onAction="#onProductCodeField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="70.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nameField" editable="false" layoutX="235.0" layoutY="130.0" onAction="#onNameField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="70.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Quantity">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="quantityField" layoutX="235.0" layoutY="180.0" onAction="#onQuantityField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="70.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Retail Price">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="retailPriceField" layoutX="235.0" layoutY="230.0" onAction="#onRetailPriceField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="70.0" layoutY="300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount %">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="discountPercentageField" layoutX="235.0" layoutY="280.0" onAction="#onDiscountPercentageField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Text layoutX="70.0" layoutY="350.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Discount">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+      </Text>
+      <TextField fx:id="discountField" layoutX="235.0" layoutY="330.0" onAction="#onDiscountField" prefWidth="280.0">
+         <font>
+            <Font name="Verdana" size="16.0" />
+         </font>
+      </TextField>
+      <Line endX="580.0" layoutY="385.0" opacity="0.6" />
+      <Button fx:id="updateButton" alignment="CENTER" layoutX="305.0" layoutY="395.0" mnemonicParsing="false" onAction="#onUpdateClicked" prefHeight="25.0" prefWidth="100.0" stylesheets="@../Stylesheets/buttonStyle.css" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Tick.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button alignment="CENTER" layoutX="415.0" layoutY="395.0" mnemonicParsing="false" onAction="#onCancelClicked" prefHeight="25.0" prefWidth="100.0" style="-fx-background-color: #FF1717;" stylesheets="@../Stylesheets/backButton.css" text="CANCEL" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0" opacity="0.9" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/Cancel.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
