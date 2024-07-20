@@ -17,9 +17,8 @@ import java.sql.*;
 import static com.example.pos.UtilityClasses.Function.databasePath;
 
 public class LoginController {
-
-    public static String adminUserName="Admin@001";
-    private String adminPassword="10203040";
+    public static String adminUserName="";
+    private String adminPassword="";
 
 
     public static String currentUserName = "";
